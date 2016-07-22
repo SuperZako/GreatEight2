@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{220FEEEE-85AE-4B60-BA7C-EFC101FAF84B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\app.css" />
+    <Content Include="images\bg\circle\pitch1.jpg" />
+    <Content Include="images\bg\circle\pitch1L.jpg" />
+    <Content Include="images\bg\circle\pitch2.jpg" />
+    <Content Include="images\bg\circle\pitch2L.jpg" />
+    <Content Include="images\bg\circle\props.png" />
+    <Content Include="images\bg\ground_field\pitch1.jpg" />
+    <Content Include="images\bg\ground_field\pitch1L.jpg" />
+    <Content Include="images\bg\ground_field\pitch2.jpg" />
+    <Content Include="images\bg\ground_field\pitch2L.jpg" />
+    <Content Include="images\bg\ground_field\props.png" />
+    <Content Include="images\bg\rect\pitch1.jpg" />
+    <Content Include="images\bg\rect\pitch1L.jpg" />
+    <Content Include="images\bg\rect\pitch2.jpg" />
+    <Content Include="images\bg\rect\pitch2L.jpg" />
+    <Content Include="images\bg\rect\props.png" />
+    <Content Include="images\bg\simple_grass\pitch1.jpg" />
+    <Content Include="images\bg\simple_grass\pitch1L.jpg" />
+    <Content Include="images\bg\simple_grass\pitch2.jpg" />
+    <Content Include="images\bg\simple_grass\pitch2L.jpg" />
+    <Content Include="images\bg\simple_grass\props.png" />
+    <Content Include="images\bg\snow\pitch1.jpg" />
+    <Content Include="images\bg\snow\pitch1L.jpg" />
+    <Content Include="images\bg\snow\pitch2.jpg" />
+    <Content Include="images\bg\snow\pitch2L.jpg" />
+    <Content Include="images\bg\snow\props.png" />
+    <Content Include="images\bg\strips\pitch1.jpg" />
+    <Content Include="images\bg\strips\pitch1L.jpg" />
+    <Content Include="images\bg\strips\pitch2.jpg" />
+    <Content Include="images\bg\strips\pitch2L.jpg" />
+    <Content Include="images\bg\strips\props.png" />
+    <Content Include="images\characters\0_000.png" />
+    <Content Include="images\characters\0_001.png" />
+    <Content Include="images\characters\0_002.png" />
+    <Content Include="images\characters\0_003.png" />
+    <Content Include="images\characters\0_004.png" />
+    <Content Include="images\characters\0_005.png" />
+    <Content Include="images\characters\0_006.png" />
+    <Content Include="images\characters\0_007.png" />
+    <Content Include="images\characters\0_008.png" />
+    <Content Include="images\characters\0_009.png" />
+    <Content Include="images\characters\0_010.png" />
+    <Content Include="images\characters\0_011.png" />
+    <Content Include="images\characters\0_012.png" />
+    <Content Include="images\characters\0_013.png" />
+    <Content Include="images\characters\0_014.png" />
+    <Content Include="images\characters\0_015.png" />
+    <Content Include="images\characters\0_016.png" />
+    <Content Include="images\characters\0_017.png" />
+    <Content Include="images\characters\0_018.png" />
+    <Content Include="images\characters\0_019.png" />
+    <Content Include="images\characters\0_020.png" />
+    <Content Include="images\characters\0_021.png" />
+    <Content Include="images\characters\0_022.png" />
+    <Content Include="images\characters\0_023.png" />
+    <Content Include="images\characters\0_024.png" />
+    <Content Include="images\characters\0_025.png" />
+    <Content Include="images\characters\0_026.png" />
+    <Content Include="images\characters\0_027.png" />
+    <Content Include="images\characters\0_028.png" />
+    <Content Include="images\characters\0_029.png" />
+    <Content Include="images\characters\0_030.png" />
+    <Content Include="images\characters\0_031.png" />
+    <Content Include="images\characters\0_032.png" />
+    <Content Include="images\characters\0_033.png" />
+    <Content Include="images\characters\0_034.png" />
+    <Content Include="images\characters\0_035.png" />
+    <Content Include="images\characters\0_036.png" />
+    <Content Include="images\characters\0_037.png" />
+    <Content Include="images\characters\0_038.png" />
+    <Content Include="images\characters\0_039.png" />
+    <Content Include="images\characters\0_040.png" />
+    <Content Include="images\characters\0_041.png" />
+    <Content Include="images\characters\0_042.png" />
+    <Content Include="images\characters\0_043.png" />
+    <Content Include="images\characters\0_044.png" />
+    <Content Include="images\characters\0_045.png" />
+    <Content Include="images\characters\0_046.png" />
+    <Content Include="images\characters\0_047.png" />
+    <Content Include="images\characters\10_000.png" />
+    <Content Include="images\characters\10_001.png" />
+    <Content Include="images\characters\10_002.png" />
+    <Content Include="images\characters\10_003.png" />
+    <Content Include="images\characters\10_004.png" />
+    <Content Include="images\characters\20_000.png" />
+    <Content Include="images\characters\20_001.png" />
+    <Content Include="images\characters\20_002.png" />
+    <Content Include="images\characters\20_003.png" />
+    <Content Include="images\characters\20_004.png" />
+    <Content Include="images\characters\20_005.png" />
+    <Content Include="images\characters\30_000.png" />
+    <Content Include="images\characters\30_001.png" />
+    <Content Include="images\characters\30_002.png" />
+    <Content Include="images\characters\30_003.png" />
+    <Content Include="images\characters\30_004.png" />
+    <Content Include="images\characters\30_005.png" />
+    <Content Include="images\characters\40_000.png" />
+    <Content Include="images\characters\40_001.png" />
+    <Content Include="images\characters\40_002.png" />
+    <Content Include="images\characters\40_003.png" />
+    <Content Include="images\characters\40_004.png" />
+    <Content Include="images\characters\40_005.png" />
+    <Content Include="images\characters\50_000.png" />
+    <Content Include="images\characters\50_001.png" />
+    <Content Include="images\characters\50_002.png" />
+    <Content Include="images\characters\50_003.png" />
+    <Content Include="images\characters\60_000.png" />
+    <Content Include="images\characters\60_001.png" />
+    <Content Include="images\characters\60_002.png" />
+    <Content Include="images\characters\60_003.png" />
+    <Content Include="images\characters\60_004.png" />
+    <Content Include="images\characters\60_005.png" />
+    <Content Include="images\characters\60_006.png" />
+    <Content Include="images\characters\60_007.png" />
+    <Content Include="images\characters\60_008.png" />
+    <Content Include="images\characters\70_000.png" />
+    <Content Include="images\characters\70_001.png" />
+    <Content Include="images\characters\70_002.png" />
+    <Content Include="images\characters\70_003.png" />
+    <Content Include="images\characters\70_004.png" />
+    <Content Include="images\characters\70_005.png" />
+    <Content Include="images\characters\70_006.png" />
+    <Content Include="images\characters\70_007.png" />
+    <Content Include="images\characters\80_000.png" />
+    <Content Include="images\characters\80_001.png" />
+    <Content Include="images\characters\80_002.png" />
+    <Content Include="images\characters\80_003.png" />
+    <Content Include="images\characters\80_004.png" />
+    <Content Include="images\characters\80_005.png" />
+    <Content Include="images\characters\80_006.png" />
+    <Content Include="images\characters\80_007.png" />
+    <Content Include="images\characters\80_008.png" />
+    <Content Include="images\characters\Jugador.png" />
+    <Content Include="images\characters\Jugador.xml" />
+    <Content Include="images\characters\Pelota.png" />
+    <Content Include="images\characters\Pelota.xml" />
+    <Content Include="index.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\Animator.ts" />
+    <TypeScriptCompile Include="src\BaseGameEntity.ts" />
+    <TypeScriptCompile Include="src\common\collections.ts" />
+    <TypeScriptCompile Include="src\common\math\MathHelper.ts" />
+    <TypeScriptCompile Include="src\common\math\Matrix.ts" />
+    <TypeScriptCompile Include="src\common\math\Vector3.ts" />
+    <TypeScriptCompile Include="src\common\messaging\MessageDispatcher.ts" />
+    <TypeScriptCompile Include="src\common\messaging\Telegram.ts" />
+    <TypeScriptCompile Include="src\FieldPlayer.ts" />
+    <TypeScriptCompile Include="src\FieldPlayerAnimator.ts" />
+    <TypeScriptCompile Include="src\Game.ts" />
+    <TypeScriptCompile Include="src\GameStates\Title.ts" />
+    <TypeScriptCompile Include="src\KeyboardState.ts" />
+    <TypeScriptCompile Include="src\Main.ts" />
+    <TypeScriptCompile Include="src\Menu.ts" />
+    <TypeScriptCompile Include="src\MovingEntity.ts" />
+    <TypeScriptCompile Include="src\PlayerBase.ts" />
+    <TypeScriptCompile Include="src\Renderer.ts" />
+    <TypeScriptCompile Include="src\SoccerPitch.ts" />
+    <TypeScriptCompile Include="src\common\state\State.ts" />
+    <TypeScriptCompile Include="src\common\state\StateMachine.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\characters\Jugador.fgt" />
+    <Content Include="images\characters\Pelota.fgt" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>GreatEight</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49927</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49927/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptOutFile>build/out.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

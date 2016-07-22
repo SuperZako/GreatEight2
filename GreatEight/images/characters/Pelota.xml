@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="D:\Projects\otros\batovi\xo\soccer\graphics\fighterFactoryProjects\pelota\generatedContent\images\Pelota.xml" source=".\*.png">
+  <img regx="16.000000" regy="18.000000" name="Pelota" savedname="Pelota.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="8" regy="5" name="pelota#0_000.png" w="16" h="10" x="135" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_001.png" w="14" h="14" x="120" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_002.png" w="14" h="14" x="120" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_003.png" w="14" h="14" x="105" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_004.png" w="14" h="14" x="105" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_005.png" w="14" h="14" x="90" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_006.png" w="14" h="14" x="90" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_007.png" w="14" h="14" x="75" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_008.png" w="14" h="14" x="75" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_009.png" w="14" h="14" x="60" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_010.png" w="14" h="14" x="60" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_011.png" w="14" h="14" x="45" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_012.png" w="14" h="14" x="45" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_013.png" w="14" h="14" x="30" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_014.png" w="14" h="14" x="30" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_015.png" w="14" h="14" x="15" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_016.png" w="14" h="14" x="15" y="0"/>
+    <frame regx="7" regy="9" name="pelota#0_017.png" w="14" h="14" x="0" y="15"/>
+    <frame regx="7" regy="9" name="pelota#0_018.png" w="14" h="14" x="0" y="0"/>
+  </framelist>
+</sequence>
