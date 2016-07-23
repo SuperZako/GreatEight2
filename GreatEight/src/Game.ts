@@ -1,5 +1,5 @@
-﻿/// <reference path="./SoccerPitch.ts" />
-
+﻿/// <reference path="./common/state/StateMachine.ts" />
+/// <reference path="./GameStates/Title.ts" />
 class Game {
 
     private stateMachine: StateMachine<Game>;
@@ -17,11 +17,18 @@ class Game {
         this.stateMachine.Update();
     }
 
-
+    public draw() {
+        //run the logic for the current state
+        this.stateMachine.draw();
+    }
 
 
     public ChangeState(state: State<Game>) {
-        this.stateMachine.ChangeState(state);
+        this.stateMachine.changeState(state);
+    }
+
+    public handleMessage(msg: Telegram) {
+        this.stateMachine.handleMessage(msg);
     }
 
 }

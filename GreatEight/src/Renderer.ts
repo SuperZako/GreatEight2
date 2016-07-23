@@ -19,6 +19,14 @@ namespace Renderer {
     export var offsetX = 100;
     export var offsetY = 100;
 
+    export function getCanvas() {
+        return canvas;
+    }
+
+    export function getCanvasSize() {
+        return { width: canvasWidth, height: canvasHeight };
+    }
+
 
     function resize() {
         canvasWidth = canvas.width = window.innerWidth;
@@ -53,17 +61,33 @@ namespace Renderer {
         };
     }
 
+    export function fillRect(fillStyle: string, x: number, y: number, width: number, height: number) {
+        context.fillStyle = fillStyle;
+        context.fillRect(x, y, width, height);
+    }
+
+
+    export function drawImageScaled(image: HTMLImageElement, offsetX: number, offsetY: number, width: number, height: number) {
+        context.drawImage(image, offsetX, offsetY, width, height);//, canvasOffsetX, canvasOffsetY, canvasImageWidth, canvasImageHeight);
+    }
+
     export function drawImage(image: HTMLImageElement, offsetX: number, offsetY: number, width?: number, height?: number, canvasOffsetX?: number, canvasOffsetY?: number, canvasImageWidth?: number, canvasImageHeight?: number) {
         context.drawImage(image, offsetX, offsetY, width, height);//, canvasOffsetX, canvasOffsetY, canvasImageWidth, canvasImageHeight);
     }
 
-    export function drawText(text: string, font: string) {
+
+
+    export function measureText(text: string, font: string) {
+        context.font = font;
+        // get text metrics
+        return context.measureText(text);
+    }
+
+    export function drawText(text: string, font: string, fillStyle: string, x: number, y: number) {
         /* フォントスタイルを定義 */
         context.font = font;
-        context.fillStyle = "red";
-        // get text metrics
-        var metrics = context.measureText(text);
-        context.fillText(text, canvasWidth / 2, canvasHeight / 2);
+        context.fillStyle = fillStyle;
+        context.fillText(text, x, y);
     }
 
     export function draw() {

@@ -1,24 +1,24 @@
-﻿class StateMachine<entity_type> {
+﻿class StateMachine<EntityType> {
     ////a pointer to the agent that owns this instance
 
-    private m_pCurrentState: State<entity_type> = null;
+    private m_pCurrentState: State<EntityType> = null;
     //a record of the last state the agent was in
-    private m_pPreviousState: State<entity_type> = null;
+    private m_pPreviousState: State<EntityType> = null;
     //this is called every time the FSM is updated
-    private m_pGlobalState: State<entity_type> = null;
+    private m_pGlobalState: State<EntityType> = null;
 
-    public constructor(private owner: entity_type) { }
+    public constructor(private owner: EntityType) { }
 
     //use these methods to initialize the FSM
-    public SetCurrentState(s: State<entity_type>) {
+    public SetCurrentState(s: State<EntityType>) {
         this.m_pCurrentState = s;
     }
 
-    public SetGlobalState(s: State<entity_type>) {
+    public SetGlobalState(s: State<EntityType>) {
         this.m_pGlobalState = s;
     }
 
-    public SetPreviousState(s: State<entity_type>) {
+    public SetPreviousState(s: State<EntityType>) {
         this.m_pPreviousState = s;
     }
 
@@ -26,25 +26,38 @@
     public Update() {
         //if a global state exists, call its execute method, else do nothing
         if (this.m_pGlobalState !== null) {
-            this.m_pGlobalState.Execute(this.owner);
+            this.m_pGlobalState.update(this.owner);
         }
 
         //same for the current state
         if (this.m_pCurrentState !== null) {
-            this.m_pCurrentState.Execute(this.owner);
+            this.m_pCurrentState.update(this.owner);
         }
     }
 
-    public HandleMessage(msg: Telegram) {
+
+    public draw() {
+        //if a global state exists, call its execute method, else do nothing
+        if (this.m_pGlobalState !== null) {
+            this.m_pGlobalState.draw(this.owner);
+        }
+
+        //same for the current state
+        if (this.m_pCurrentState !== null) {
+            this.m_pCurrentState.draw(this.owner);
+        }
+    }
+
+    public handleMessage(msg: Telegram) {
         //first see if the current state is valid and that it can handle
         //the message
-        if (this.m_pCurrentState != null && this.m_pCurrentState.OnMessage(this.owner, msg)) {
+        if (this.m_pCurrentState != null && this.m_pCurrentState.onMessage(this.owner, msg)) {
             return true;
         }
 
         //if not, and if a global state has been implemented, send 
         //the message to the global state
-        if (this.m_pGlobalState != null && this.m_pGlobalState.OnMessage(this.owner, msg)) {
+        if (this.m_pGlobalState != null && this.m_pGlobalState.onMessage(this.owner, msg)) {
             return true;
         }
 
@@ -52,20 +65,20 @@
     }
 
     //change to a new state
-    public ChangeState(pNewState: State<entity_type>) {
+    public changeState(pNewState: State<EntityType>) {
         //assert pNewState != null : "<StateMachine::ChangeState>: trying to change to NULL state";
 
         //keep a record of the previous state
         this.m_pPreviousState = this.m_pCurrentState;
 
         //call the exit method of the existing state
-        this.m_pCurrentState.Exit(this.owner);
+        this.m_pCurrentState.exit(this.owner);
 
         //change state to the new state
         this.m_pCurrentState = pNewState;
 
         //call the entry method of the new state
-        this.m_pCurrentState.Enter(this.owner);
+        this.m_pCurrentState.enter(this.owner);
     }
 
     ////change state back to the previous state
@@ -75,7 +88,7 @@
 
     //returns true if the current state's type is equal to the type of the
     //class passed as a parameter. 
-    public isInState(st: State<entity_type>) {
+    public isInState(st: State<EntityType>) {
         //return this.m_pCurrentState/*.getClass()*/ == st/*.getClass()*/;
         return this.m_pCurrentState.getName() === st.getName();
     }

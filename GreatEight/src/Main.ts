@@ -1,19 +1,14 @@
 ﻿/// <reference path="./common/math/Matrix.ts" />
+/// <reference path="./GameStates/Title.ts" />
 
 /// <reference path="./SoccerPitch.ts" />
 /// <reference path="./Game.ts" />
-/// <reference path="./Menu.ts" />
 /// <reference path="./KeyboardState.ts" />
 /// <reference path="./Renderer.ts" />
 
 namespace Main {
 
-    enum State {
-        Menu,
-        Game,
-    }
-
-    let state = State.Menu;
+    var game = new Game();
 
     var startTime = new Date().getTime();
 
@@ -23,10 +18,28 @@ namespace Main {
 
     var keyboard = new KeyboardState();
 
+    var mousePoint = { x: 0, y: 0 };
+    function onMouseMove(ev: MouseEvent) {
+        mousePoint.x = ev.x;
+        mousePoint.y = ev.y;
+    }
+
+    function onMouseDown(ev: MouseEvent) {
+        game.handleMessage({ eventType: "mousedown", event: ev });
+    }
+
+
     export function initialize() {
+        SoundManager.resetSoundmanager();
         Renderer.initialize();
+        let canvas = Renderer.getCanvas();
+        canvas.addEventListener('mousemove', onMouseMove, false);
+        canvas.addEventListener('mousedown', onMouseDown, false);
+
         update();
     }
+
+
 
     function update() {
         requestAnimationFrame(update);
@@ -83,25 +96,30 @@ namespace Main {
 
         soccerPitch.update();
         fieldPlayer.update(dt);
+
+        game.update();
+
         draw();
     }
 
     function draw() {
 
-        switch (state) {
-            case State.Menu:
-                Menu.draw();
-                break;
-            case State.Game:
-                soccerPitch.draw();
-                fieldPlayer.draw();
+        game.draw();
 
-                Renderer.draw();
-                break;
-            default:
-                break;
+        //switch (state) {
+        //    case State.Menu:
+        //        Menu.draw();
+        //        break;
+        //    case State.Game:
+        //        soccerPitch.draw();
+        //        fieldPlayer.draw();
 
-        }
+        //        Renderer.draw();
+        //        break;
+        //    default:
+        //        break;
+
+        //}
     }
 
 }

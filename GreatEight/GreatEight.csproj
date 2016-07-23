@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\app.css" />
+    <Content Include="images\bal0002-001.jpg" />
     <Content Include="images\bg\circle\pitch1.jpg" />
     <Content Include="images\bg\circle\pitch1L.jpg" />
     <Content Include="images\bg\circle\pitch2.jpg" />
@@ -158,17 +159,20 @@
     <Content Include="images\characters\Jugador.xml" />
     <Content Include="images\characters\Pelota.png" />
     <Content Include="images\characters\Pelota.xml" />
+    <Content Include="images\gi01a2015031817003lveg.png" />
     <Content Include="index.html" />
+    <Content Include="sounds\title.mp3" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\Animator.ts" />
     <TypeScriptCompile Include="src\BaseGameEntity.ts" />
     <TypeScriptCompile Include="src\common\collections.ts" />
+    <TypeScriptCompile Include="src\common\geometry\Rectangle.ts" />
     <TypeScriptCompile Include="src\common\math\MathHelper.ts" />
     <TypeScriptCompile Include="src\common\math\Matrix.ts" />
+    <TypeScriptCompile Include="src\common\math\Vector2.ts" />
     <TypeScriptCompile Include="src\common\math\Vector3.ts" />
-    <TypeScriptCompile Include="src\common\messaging\MessageDispatcher.ts" />
     <TypeScriptCompile Include="src\common\messaging\Telegram.ts" />
     <TypeScriptCompile Include="src\FieldPlayer.ts" />
     <TypeScriptCompile Include="src\FieldPlayerAnimator.ts" />
@@ -176,13 +180,13 @@
     <TypeScriptCompile Include="src\GameStates\Title.ts" />
     <TypeScriptCompile Include="src\KeyboardState.ts" />
     <TypeScriptCompile Include="src\Main.ts" />
-    <TypeScriptCompile Include="src\Menu.ts" />
     <TypeScriptCompile Include="src\MovingEntity.ts" />
     <TypeScriptCompile Include="src\PlayerBase.ts" />
     <TypeScriptCompile Include="src\Renderer.ts" />
     <TypeScriptCompile Include="src\SoccerPitch.ts" />
     <TypeScriptCompile Include="src\common\state\State.ts" />
     <TypeScriptCompile Include="src\common\state\StateMachine.ts" />
+    <TypeScriptCompile Include="src\soundmanager.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\characters\Jugador.fgt" />
